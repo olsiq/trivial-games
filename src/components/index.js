@@ -1,3 +1,3 @@
-import {} from './';
+import { GameLayout, BetsLayout, ControlsLayout } from './layout';
 
-export {};
+export { GameLayout, BetsLayout, ControlsLayout };
