@@ -1,5 +1,8 @@
 import React from "react";
+import "./game.css";
+import { Poker } from "./poker/Poker";
 
 export const Game = ({ type }) => {
-  return <div>Game</div>;
+  const viewGame = <Poker />;
+  return <div className="gameWrapper">{viewGame}</div>;
 };

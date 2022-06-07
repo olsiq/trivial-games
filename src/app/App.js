@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Game, GameLayout } from "../components";
+import { Card, Game, GameLayout, Header } from "../components";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">header</header>
+      <Header />
       <GameLayout>
         <Game />
       </GameLayout>
