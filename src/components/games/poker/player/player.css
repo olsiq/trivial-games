@@ -1,0 +1,4 @@
+.myHand {
+  display: flex;
+  flex-direction: column;
+}
