@@ -1,9 +1,11 @@
 import { store } from "./store";
-import { fold, raise, check, shuffle, newRound } from "./pokerSlice";
+import { fold, raise, check, shuffle, newRound, endRound } from "./pokerSlice";
 import {
   stageSelector,
   playerSelector,
+  playerBalalanceSelector,
   opponentSelector,
+  opponentBalalanceSelector,
   tableSelector,
 } from "./pokerSelectors";
 
@@ -14,8 +16,11 @@ export {
   check,
   shuffle,
   newRound,
+  endRound,
   stageSelector,
   playerSelector,
   opponentSelector,
   tableSelector,
+  opponentBalalanceSelector,
+  playerBalalanceSelector,
 };

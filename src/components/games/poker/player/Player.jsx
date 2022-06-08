@@ -1,12 +1,13 @@
 import React from "react";
 
 import { useSelector } from "react-redux";
-import { playerSelector } from "../../../../redux";
+import { playerSelector, playerBalalanceSelector } from "../../../../redux";
 
 import { Card } from "../../../../components";
 
 export const Player = ({ name = "Player" }) => {
   const [card1, card2] = useSelector(playerSelector);
+  const balance = useSelector(playerBalalanceSelector);
   return (
     <div className="myHand">
       <div className="cards">
@@ -14,6 +15,7 @@ export const Player = ({ name = "Player" }) => {
         <Card value={card2} type={"player"} />
       </div>
       <h2>{name}</h2>
+      <p>Balance: {balance} $</p>
     </div>
   );
 };

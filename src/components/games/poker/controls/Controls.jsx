@@ -1,4 +1,5 @@
 import React from "react";
+import { fold, raise, check } from "../../../../redux";
 import { Button } from "../../../button";
 import { Slider } from "../../../slider";
 
@@ -8,9 +9,9 @@ export const Controls = () => {
   return (
     <div className="controls">
       <div className="controlsBtnsWrapper">
-        <Button action={"raise"} content={"raise"} />
-        <Button action={"fold"} content={"fold"} />
-        <Button action={"check"} content={"check"} />
+        <Button action={raise()} content={"raise"} />
+        <Button action={fold()} content={"fold"} />
+        <Button action={check()} content={"check"} />
       </div>
       <Slider />
     </div>
