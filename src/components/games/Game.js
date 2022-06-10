@@ -1,8 +1,18 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./game.css";
-import { Poker } from "./poker/Poker";
+import { Hangman } from "./hangman";
+import { Poker } from "./poker";
+import { activeSelector } from "../../redux";
 
-export const Game = ({ type }) => {
-  const viewGame = <Poker />;
-  return <div className="gameWrapper">{viewGame}</div>;
+export const Game = () => {
+  const isActive = useSelector(activeSelector);
+  return (
+    <div className="gameWrapper">
+      {isActive === "Poker" && <Poker />}
+      {isActive === "Hang Man" && <Hangman />}
+      {/* {isActive === "Mine Sweeper" && <MineSweeper />}
+      {isActive === "Black Jack" && <BlackJack />} */}
+    </div>
+  );
 };

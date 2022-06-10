@@ -10,6 +10,19 @@ import {
   potSelector,
 } from "./pokerSelectors";
 
+import { reset, tryLetter } from "./hangManSlice";
+import {
+  wrongLetterSelector,
+  wordSelector,
+  fullWordSelector,
+  correctPressedSelector,
+  pressedSelector,
+  correctLetterSelector,
+  imageSelector,
+} from "./hangmanSelectos";
+
+import { gameListSelector, activeSelector, changeGame } from "./headerSlice";
+
 export {
   store,
   fold,
@@ -18,6 +31,9 @@ export {
   shuffle,
   newRound,
   endRound,
+  reset,
+  tryLetter,
+  changeGame,
   stageSelector,
   playerSelector,
   opponentSelector,
@@ -25,4 +41,13 @@ export {
   opponentBalalanceSelector,
   playerBalalanceSelector,
   potSelector,
+  wrongLetterSelector,
+  wordSelector,
+  fullWordSelector,
+  correctPressedSelector,
+  pressedSelector,
+  correctLetterSelector,
+  imageSelector,
+  gameListSelector,
+  activeSelector,
 };

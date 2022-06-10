@@ -1,21 +1,26 @@
-import React, { useState } from "react";
-import { gameList } from "./gameList";
+import React from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { gameListSelector, activeSelector, changeGame } from "../../redux";
 
 import "./header.css";
 export const Header = () => {
-  const [isActive, setActive] = useState("Poker");
-  const changeGame = (game) => setActive(`${game}`);
-  const navigation = gameList.map((ele, index) => (
+  const dispatch = useDispatch();
+  const isActive = useSelector(activeSelector);
+  const list = useSelector(gameListSelector);
+
+  const activate = (game) => dispatch(changeGame(`${game}`));
+  const navigation = list.map((ele, index) => (
     <li
       key={index}
       className={ele === isActive ? "list-item active" : "list-item"}
       data-game={ele}
-      onClick={() => changeGame(ele)}
+      onClick={() => activate(ele)}
     >
       {ele}
     </li>
   ));
-  console.log(isActive);
+
   return (
     <header className="header">
       <nav className="navWrapper">

@@ -1,2 +1,4 @@
 import { Game } from "./Game";
-export { Game };
+import { Poker } from "./poker";
+import { Hangman } from "./hangman";
+export { Game, Poker, Hangman };
