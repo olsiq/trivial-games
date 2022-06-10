@@ -1,1 +1,1 @@
-export const gameList = ["Poker", "Black Jack", "GAME3", "GAME4"];
+export const gameList = ["Poker", "Black Jack", "Mine Sweeper", "Hang Man"];

@@ -7,6 +7,7 @@ import {
   opponentSelector,
   opponentBalalanceSelector,
   tableSelector,
+  potSelector,
 } from "./pokerSelectors";
 
 export {
@@ -23,4 +24,5 @@ export {
   tableSelector,
   opponentBalalanceSelector,
   playerBalalanceSelector,
+  potSelector,
 };

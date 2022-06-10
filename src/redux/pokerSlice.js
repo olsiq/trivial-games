@@ -10,6 +10,7 @@ const initialState = {
   stage: 1,
   status: "not started yet",
   currentPlayer: true,
+  pot: 0,
 };
 
 const pokerSlice = createSlice({
@@ -30,20 +31,21 @@ const pokerSlice = createSlice({
     },
     raise: (state, action) => {
       state.round === 0 && (state.status = "currently playing");
-      state.stage++;
+      // state.stage++;
     },
     check: (state) => {
       state.round === 0 && (state.status = "currently playing");
-      state.stage++;
+      state.stage < 5 && state.stage++;
     },
-    shuffle: (state) => {
-      state.stage = 1;
-      state.cards = roundCards(7);
-    },
+    shuffle: (state) => {},
     newRound: (state) => {
       state.round++;
       state.stage = 1;
       state.bet = 10;
+      state.cards = roundCards(7);
+      state.pot = 10;
+      state.opponentBalance -= 5;
+      state.playerBalance -= 5;
     },
     endRound: (state) => {},
   },

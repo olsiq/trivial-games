@@ -1,6 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import poker from "./pokerSlice";
+import hangManSlice from "./hangManSlice";
+
+import pokerSlice from "./pokerSlice";
 
 export const store = configureStore({
-  reducer: poker,
+  reducer: {
+    Poker: pokerSlice,
+    Hangman: hangManSlice,
+  },
 });
