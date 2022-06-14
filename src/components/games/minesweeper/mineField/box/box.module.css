@@ -1,0 +1,50 @@
+.box {
+  border: 1px solid #ddd;
+  background-color: rgb(165, 165, 165);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-item:hover {
+  cursor: pointer;
+}
+
+[data-isopen="true"] {
+  background-color: white;
+}
+[data-value="0"] {
+  color: white;
+}
+[data-value="1"] {
+  color: blue;
+}
+
+[data-value="2"] {
+  color: green;
+}
+[data-value="3"] {
+  color: red;
+}
+[data-value="4"] {
+  color: purple;
+}
+[data-value="5"] {
+  color: burlywood;
+}
+
+[data-value="6"] {
+  color: teal;
+}
+
+[data-value="7"] {
+  color: orange;
+}
+
+[data-value="8"] {
+  color: black;
+}
+.bomb {
+  background-color: brown;
+}

@@ -1,0 +1,23 @@
+.minefieldWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.minefieldWrapper > h1 {
+  display: flex;
+  justify-content: center;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  background-color: beige;
+  color: black;
+  border-radius: 10px 10px 0 0;
+}
+
+.mineField {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}

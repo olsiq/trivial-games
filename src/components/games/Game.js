@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import "./game.css";
 import { Hangman } from "./hangman";
 import { Poker } from "./poker";
+import { MineSweeper } from "./minesweeper";
 import { activeSelector } from "../../redux";
 
 export const Game = () => {
@@ -11,8 +12,8 @@ export const Game = () => {
     <div className="gameWrapper">
       {isActive === "Poker" && <Poker />}
       {isActive === "Hang Man" && <Hangman />}
-      {/* {isActive === "Mine Sweeper" && <MineSweeper />}
-      {isActive === "Black Jack" && <BlackJack />} */}
+      {isActive === "Mine Sweeper" && <MineSweeper />}
+      {/* {isActive === "Black Jack" && <BlackJack />} */}
     </div>
   );
 };

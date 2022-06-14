@@ -1,0 +1,241 @@
+body {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(192, 186, 175);
+}
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game > h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.wrapper {
+  background-color: white;
+  border: 5px solid gray;
+}
+
+.info {
+  border: solid 1px;
+  display: flex;
+  flex-direction: row;
+  height: 3em;
+}
+.flags {
+  width: 100%;
+  flex-wrap: wrap;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timer {
+  width: 100%;
+  flex-wrap: wrap;
+  border-left: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#grid {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  background-color: #fff;
+}
+
+.grid-item {
+  padding: 1em;
+  border: 1px solid #ddd;
+  background-color: rgb(165, 165, 165);
+  width: 0.2rem;
+  height: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item:hover {
+  cursor: pointer;
+}
+
+[data-isopen="true"] {
+  background-color: white;
+}
+[data-value="0"] {
+  color: white;
+}
+[data-value="1"] {
+  color: blue;
+}
+
+[data-value="2"] {
+  color: green;
+}
+[data-value="3"] {
+  color: red;
+}
+[data-value="4"] {
+  color: purple;
+}
+[data-value="5"] {
+  color: burlywood;
+}
+
+[data-value="6"] {
+  color: teal;
+}
+
+[data-value="7"] {
+  color: orange;
+}
+
+[data-value="8"] {
+  color: black;
+}
+.bomb {
+  background-color: brown;
+}
+
+.game-over {
+  z-index: 1000;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* controls */
+
+.controls {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.lvl-wrapper {
+  display: flex;
+}
+.btn-start {
+  width: 100%;
+  margin: 5px 0;
+  height: 30px;
+}
+.btn-start:hover {
+  background-color: rgba(0, 255, 13, 0.239);
+}
+
+#scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px 20px 20px 20px;
+  width: 100%;
+}
+#scores > p {
+  border: 2px dotted white;
+  width: 50%;
+  text-align: center;
+  height: 25px;
+  padding-top: 2px;
+  text-transform: uppercase;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+}
+.tablinks {
+  height: 30px;
+  width: 80px;
+  border-style: none;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  border-top: 2px solid white;
+}
+.tablinks:first-child {
+  border-left: 2px solid white;
+  border-top-left-radius: 10px;
+}
+.tablinks:last-child {
+  border-right: 2px solid white;
+  border-top-right-radius: 10px;
+}
+.tablinks:hover {
+  cursor: pointer;
+  background-color: rgba(250, 250, 250, 0.644);
+  color: black;
+}
+
+.divider {
+  height: 10px;
+}
+.Contents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.37);
+  color: white;
+  border-radius: 0 0 20px 20px;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+}
+.tabContent:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.623);
+  color: black;
+}
+.tabContent:last-child {
+  border-radius: 0 0 20px 20px;
+}
+.easy {
+  background-color: #007eff;
+  color: white;
+}
+.difficult {
+  background-color: #358322;
+  color: white;
+}
+.expert {
+  background-color: rgb(195 106 4);
+  color: white;
+}
+.name {
+  width: 50%;
+}
+.name:before {
+  content: "name:   ";
+  padding-left: 10px;
+}
+
+.time:before {
+  content: "time:   ";
+}
+.time:after {
+  content: " seconds";
+}
+
+@media only screen and (min-width: 750px) {
+  body {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
