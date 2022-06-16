@@ -34,6 +34,16 @@ import {
   changeGame,
 } from "./slices/headerSlice";
 
+import { open } from "./slices/minesweeperSlice";
+
+import {
+  level,
+  status,
+  timer,
+  flags,
+  mine,
+} from "./selectors/minesweeperSelectors";
+
 export {
   store,
   fold,
@@ -45,6 +55,7 @@ export {
   reset,
   tryLetter,
   changeGame,
+  open,
   stageSelector,
   playerSelector,
   opponentSelector,
@@ -61,4 +72,9 @@ export {
   imageSelector,
   gameListSelector,
   activeSelector,
+  level,
+  status,
+  timer,
+  flags,
+  mine,
 };
