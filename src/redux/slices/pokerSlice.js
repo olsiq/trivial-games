@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { roundCards } from "../helpers";
+import { roundCards } from "../../helpers";
 
 const initialState = {
   cards: roundCards(7),

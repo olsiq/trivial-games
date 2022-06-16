@@ -1,5 +1,12 @@
 import { store } from "./store";
-import { fold, raise, check, shuffle, newRound, endRound } from "./pokerSlice";
+import {
+  fold,
+  raise,
+  check,
+  shuffle,
+  newRound,
+  endRound,
+} from "./slices/pokerSlice";
 import {
   stageSelector,
   playerSelector,
@@ -8,9 +15,9 @@ import {
   opponentBalalanceSelector,
   tableSelector,
   potSelector,
-} from "./pokerSelectors";
+} from "./selectors/pokerSelectors";
 
-import { reset, tryLetter } from "./hangManSlice";
+import { reset, tryLetter } from "./slices/hangManSlice";
 import {
   wrongLetterSelector,
   wordSelector,
@@ -19,9 +26,13 @@ import {
   pressedSelector,
   correctLetterSelector,
   imageSelector,
-} from "./hangmanSelectos";
+} from "./selectors/hangmanSelectos";
 
-import { gameListSelector, activeSelector, changeGame } from "./headerSlice";
+import {
+  gameListSelector,
+  activeSelector,
+  changeGame,
+} from "./slices/headerSlice";
 
 export {
   store,
