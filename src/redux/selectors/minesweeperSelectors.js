@@ -1,5 +1,7 @@
-export const level = (state) => state.level;
-export const status = (state) => state.status;
-export const timer = (state) => state.timer;
-export const flags = (state) => state.flags;
-export const mine = (state) => state.innerValue;
+export const levelSelector = (state) => state.MineSweeper.level;
+export const statusSelector = (state) => state.MineSweeper.status;
+export const timerSelector = (state) => state.MineSweeper.timer;
+export const flagsSelector = (state) => state.MineSweeper.flags;
+export const minefieldSelector = (state) => state.MineSweeper.minefield;
+export const mineSelector = (state) =>
+  state.MineSweeper.minefield[0].innerValue;

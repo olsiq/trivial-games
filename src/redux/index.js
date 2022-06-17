@@ -37,11 +37,12 @@ import {
 import { open } from "./slices/minesweeperSlice";
 
 import {
-  level,
-  status,
-  timer,
-  flags,
-  mine,
+  levelSelector,
+  statusSelector,
+  timerSelector,
+  flagsSelector,
+  mineSelector,
+  minefieldSelector,
 } from "./selectors/minesweeperSelectors";
 
 export {
@@ -72,9 +73,10 @@ export {
   imageSelector,
   gameListSelector,
   activeSelector,
-  level,
-  status,
-  timer,
-  flags,
-  mine,
+  levelSelector,
+  statusSelector,
+  timerSelector,
+  flagsSelector,
+  mineSelector,
+  minefieldSelector,
 };
