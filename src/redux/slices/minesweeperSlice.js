@@ -1,28 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { gameData } from "../../helpers/minesweeper/makeGame";
+
+const data = gameData(5, 10, 7);
+
+const mineField = data.map((cell, idx) => {
+  return {
+    index: idx,
+    hasMine: cell === "bomb",
+    isFlaged: false,
+    innerValue: cell === "bomb" ? "💣" : `${cell}`,
+    isOpened: false,
+  };
+});
 
 //helpers  -> findNeighbours
 const findNeighbours = () => [1, 2, 3];
 const initialState = {
   level: "easy",
   status: "not started yet",
-  timer: "zero",
-  flags: 15,
-  minefield: [
-    {
-      index: 0,
-      hasMine: false,
-      hasFlag: false,
-      innerValue: 1,
-      isOpened: false,
-    },
-    {
-      index: 1,
-      hasMine: false,
-      hasFlag: false,
-      innerValue: 2,
-      isOpened: false,
-    },
-  ],
+  timer: " 0:0",
+  flags: 10,
+
+  minefield: mineField,
 };
 
 const mineSweeperSlice = createSlice({
