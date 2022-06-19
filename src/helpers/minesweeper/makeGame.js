@@ -14,7 +14,7 @@ export const gameData = (row, col, bombs) => {
       grid[neighbour] !== "bomb" && grid[neighbour]++;
     });
   });
-  grid.forEach((el, index, array) => (el === 0 ? (array[index] = " ") : el));
+  // grid.forEach((el, index, array) => (el === 0 ? (array[index] = " ") : el));
 
   return grid;
 };

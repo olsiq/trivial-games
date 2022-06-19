@@ -1,3 +1,6 @@
 import { deck } from "./deck";
 import { roundCards } from "./roundCards";
-export { deck, roundCards };
+import { gameData } from "./minesweeper/makeGame";
+import { cellPosition } from "./minesweeper/findPosition";
+import { findNeighbors } from "./minesweeper/findNeighbours";
+export { deck, roundCards, gameData, cellPosition, findNeighbors };

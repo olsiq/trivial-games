@@ -11,7 +11,12 @@ import classes from "./minefield.module.css";
 export const MineField = () => {
   const array = useSelector(minefieldSelector);
   const boxes = array.map((box, index) => (
-    <Box key={index} value={box.innerValue} isOpened={box.isOpened} />
+    <Box
+      key={index}
+      value={box.innerValue}
+      isOpened={box.isOpened}
+      index={box.index}
+    />
   ));
   return (
     <div className={classes.minefieldWrapper}>
