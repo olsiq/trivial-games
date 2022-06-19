@@ -1,4 +1,5 @@
 import React from "react";
+import { Levels } from "./levels";
 import { MineField } from "./mineField";
 import { Scores } from "./score";
 export const MineSweeper = () => {
@@ -6,6 +7,7 @@ export const MineSweeper = () => {
     <div>
       <MineField />
       <Scores />
+      <Levels />
     </div>
   );
 };
