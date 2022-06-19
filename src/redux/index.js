@@ -34,7 +34,7 @@ import {
   changeGame,
 } from "./slices/headerSlice";
 
-import { open } from "./slices/minesweeperSlice";
+import { open, flag } from "./slices/minesweeperSlice";
 
 import {
   levelSelector,
@@ -43,6 +43,8 @@ import {
   flagsSelector,
   mineSelector,
   minefieldSelector,
+  flagedBoxSelector,
+  highScoresSelector,
 } from "./selectors/minesweeperSelectors";
 
 export {
@@ -57,6 +59,7 @@ export {
   tryLetter,
   changeGame,
   open,
+  flag,
   stageSelector,
   playerSelector,
   opponentSelector,
@@ -79,4 +82,6 @@ export {
   flagsSelector,
   mineSelector,
   minefieldSelector,
+  flagedBoxSelector,
+  highScoresSelector,
 };

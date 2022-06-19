@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   gameList: ["Poker", "Black Jack", "Mine Sweeper", "Hang Man"],
-  active: "Poker",
+  active: "Mine Sweeper",
 };
 
 const gamesSlice = createSlice({
