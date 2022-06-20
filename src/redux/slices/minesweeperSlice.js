@@ -1,20 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { gameData, cellPosition, findNeighbors } from "../../helpers";
+import {
+  gameData,
+  mineField,
+  cellPosition,
+  findNeighbors,
+} from "../../helpers";
 
 const bombs = 7;
 const cols = 10;
 const rows = 5;
 const data = gameData(rows, cols, bombs);
-
-const mineField = data.map((cell, idx) => {
-  return {
-    index: idx,
-    hasMine: cell === "bomb",
-    isFlaged: false,
-    innerValue: cell === "bomb" ? "💣" : `${cell}`,
-    isOpened: false,
-  };
-});
 
 const initialState = {
   level: "easy",
@@ -23,7 +18,7 @@ const initialState = {
   flags: bombs,
   bombs: bombs,
   toWin: cols * rows - bombs,
-  minefield: mineField,
+  minefield: mineField(data),
   highScores: {
     easy: [
       { name: "john Wick", time: "10" },
@@ -110,9 +105,20 @@ const mineSweeperSlice = createSlice({
         }
       }
     },
+    newGame: (state, action) => {
+      const { level, bombs, cols, rows } = action.payload;
+      state.level = level;
+      state.status = "not started yet";
+      state.timer = " 0:0";
+      state.flags = bombs;
+      state.bombs = bombs;
+      state.toWin = cols * rows - bombs;
+      const data = gameData(rows, cols, bombs);
+      state.minefield = mineField(data);
+    },
   },
 });
 
-export const { open, flag } = mineSweeperSlice.actions;
+export const { open, flag, newGame } = mineSweeperSlice.actions;
 
 export default mineSweeperSlice.reducer;

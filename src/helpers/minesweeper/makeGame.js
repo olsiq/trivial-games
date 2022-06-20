@@ -18,3 +18,13 @@ export const gameData = (row, col, bombs) => {
 
   return grid;
 };
+export const mineField = (data) =>
+  data.map((cell, idx) => {
+    return {
+      index: idx,
+      hasMine: cell === "bomb",
+      isFlaged: false,
+      innerValue: cell === "bomb" ? "💣" : `${cell}`,
+      isOpened: false,
+    };
+  });

@@ -34,7 +34,7 @@ import {
   changeGame,
 } from "./slices/headerSlice";
 
-import { open, flag } from "./slices/minesweeperSlice";
+import { open, flag, newGame } from "./slices/minesweeperSlice";
 
 import {
   levelSelector,
@@ -60,6 +60,7 @@ export {
   changeGame,
   open,
   flag,
+  newGame,
   stageSelector,
   playerSelector,
   opponentSelector,

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { levelSelector } from "../../../../redux";
+import { levelSelector, newGame } from "../../../../redux";
+
 export const Levels = () => {
   const dispatch = useDispatch();
   const level = useSelector(levelSelector);
@@ -18,7 +19,24 @@ export const Levels = () => {
   ));
 
   const startNewGame = () => {
-    // dispatch(newGame(activeLevel));
+    const easy = { level: "easy", bombs: 10, cols: 10, rows: 5 };
+    const difficult = { level: "difficult", bombs: 20, cols: 10, rows: 4 };
+    const expert = { level: "expert", bombs: 40, cols: 10, rows: 8 };
+
+    switch (activeLevel) {
+      case "difficult":
+        dispatch(newGame(difficult));
+        break;
+      case "expert":
+        dispatch(newGame(expert));
+        break;
+      case "easy":
+        dispatch(newGame(easy));
+        break;
+      default:
+        console.log("error at the switch statement");
+        break;
+    }
   };
   return (
     <div>
