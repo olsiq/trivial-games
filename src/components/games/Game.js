@@ -9,8 +9,12 @@ import { activeSelector } from "../../redux";
 
 export const Game = () => {
   const isActive = useSelector(activeSelector);
+  const background =
+    isActive !== "Poker" && isActive !== "Black Jack"
+      ? { background: "#2c2c2c" }
+      : { background: "green" };
   return (
-    <div className="gameWrapper">
+    <div className="gameWrapper" style={background}>
       {isActive === "Poker" && <Poker />}
       {isActive === "Hang Man" && <Hangman />}
       {isActive === "Mine Sweeper" && <MineSweeper />}

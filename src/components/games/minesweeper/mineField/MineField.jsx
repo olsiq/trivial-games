@@ -19,13 +19,15 @@ export const MineField = () => {
     />
   ));
   return (
-    <div className={classes.minefieldWrapper}>
-      <h1>Minesweeper</h1>
-      <div className={classes.controls}>
-        <Flag />
-        <Timer />
+    <div className={classes.wrapper}>
+      <div className={classes.minefieldWrapper}>
+        <h1>Minesweeper</h1>
+        <div className={classes.controls}>
+          <Flag />
+          <Timer />
+        </div>
+        <div className={classes.mineField}>{boxes}</div>
       </div>
-      <div className={classes.mineField}>{boxes}</div>
     </div>
   );
 };

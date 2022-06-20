@@ -1,10 +1,21 @@
+.wrapper {
+  grid-area: minesweeper;
+
+  min-height: 45vh;
+  padding: 10px;
+  display: flex;
+  border-radius: 48px;
+  background: #2c2c2c;
+  box-shadow: 20px 20px 40px #1d1d1d, -20px -20px 40px #3b3b3b;
+}
+
 .minefieldWrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .minefieldWrapper > h1 {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 .controls {
   display: flex;

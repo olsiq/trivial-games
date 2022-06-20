@@ -6,10 +6,6 @@ body {
   flex-direction: column;
   background-color: rgb(192, 186, 175);
 }
-:root {
-  --grid-cols: 1;
-  --grid-rows: 1;
-}
 .game {
   display: flex;
   flex-direction: column;

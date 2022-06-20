@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { levelSelector, newGame } from "../../../../redux";
 
+import classes from "./level.module.css";
+
 export const Levels = () => {
   const dispatch = useDispatch();
   const level = useSelector(levelSelector);
@@ -39,13 +41,15 @@ export const Levels = () => {
     }
   };
   return (
-    <div>
-      <h1>you can change the difficulty here!</h1>
+    <div className={classes.wrapper}>
+      <h3>You can change the difficulty here!</h3>
 
       <select value={activeLevel} onChange={changeLevel}>
         {showOptions}
       </select>
-      <button onClick={startNewGame}> New Game </button>
+      <button className={classes["btn-start"]} onClick={startNewGame}>
+        New Game
+      </button>
     </div>
   );
 };

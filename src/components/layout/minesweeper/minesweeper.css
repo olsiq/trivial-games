@@ -1,0 +1,10 @@
+.MineSweeperLayout {
+  width: 100%;
+  min-height: 60vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  grid-template-columns: 400px 1fr 1fr;
+  grid-template-areas: "level minesweeper highscores";
+}
