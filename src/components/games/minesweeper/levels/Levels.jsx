@@ -23,7 +23,7 @@ export const Levels = () => {
   const startNewGame = () => {
     const easy = { level: "easy", bombs: 10, cols: 10, rows: 5 };
     const difficult = { level: "difficult", bombs: 20, cols: 10, rows: 4 };
-    const expert = { level: "expert", bombs: 40, cols: 10, rows: 8 };
+    const expert = { level: "expert", bombs: 30, cols: 10, rows: 5 };
 
     switch (activeLevel) {
       case "difficult":
