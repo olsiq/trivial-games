@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux/es/exports";
 import { highScoresSelector, levelSelector } from "../../../../redux/";
 
+import classes from "./highscores.module.css";
+
 export const Scores = () => {
   const level = useSelector(levelSelector);
   const players = useSelector(highScoresSelector(level));
@@ -19,17 +21,17 @@ export const Scores = () => {
 
   const levels = ["Easy", "Difficult", "Expert"];
   const chooseLevel = levels.map((level) => (
-    <div key={level} onClick={changeLevel}>
+    <div key={level} onClick={changeLevel} className={classes.level}>
       <p>{level}</p>
     </div>
   ));
   return (
-    <div>
-      <div>
+    <div className={classes.wrapper}>
+      <div className={classes.contentWrapper}>
         <h1>Highscores</h1>
-        {chooseLevel}
+        <div className={classes.levels}>{chooseLevel}</div>
       </div>
-      {showTable}
+      <div className={classes.highscores}>{showTable}</div>
     </div>
   );
 };
