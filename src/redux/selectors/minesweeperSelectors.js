@@ -10,3 +10,5 @@ export const mineSelector = (state) =>
 
 export const highScoresSelector = (level) => (state) =>
   state.MineSweeper.highScores[level];
+export const columnSelector = (state) => state.MineSweeper.columns;
+export const rowsSelector = (state) => state.MineSweeper.rows;

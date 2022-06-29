@@ -14,6 +14,8 @@ const data = gameData(rows, cols, bombs);
 const initialState = {
   level: "easy",
   status: "not started yet",
+  rows: rows,
+  colums: cols,
   timer: " 0:0",
   flags: bombs,
   bombs: bombs,
@@ -64,23 +66,23 @@ const mineSweeperSlice = createSlice({
               }
             });
             break;
-          case "0":
-            // ! error below
-            //recursion
-            box.isOpened = true;
-            state.toWin--;
-            const position = cellPosition(box.index, 10, 50);
-            const neighbours = findNeighbors(position, 10, box.index);
-            console.log(
-              `position is= ${position} and neighbours are = ${neighbours}`
-            );
-            neighbours.forEach((neighbour) => {
-              // state.minefield[neighbour].isOpened = true;
-              // --state.toWin;
-              open(neighbour);
-            });
+          // case "0":
+          //   // ! error below
+          //   //recursion
+          //   box.isOpened = true;
+          //   state.toWin--;
+          //   //   const position = cellPosition(box.index, 10, 50);
+          //   //   const neighbours = findNeighbors(position, 10, box.index);
+          //   //   console.log(
+          //   //     `position is= ${position} and neighbours are = ${neighbours}`
+          //   //   );
+          //   //   neighbours.forEach((neighbour) => {
+          //   //     // state.minefield[neighbour].isOpened = true;
+          //   //     // --state.toWin;
+          //   //     open(neighbour);
+          //   //   });
 
-            break;
+          //   break;
           default:
             state.minefield[action.payload].isOpened = true;
             state.toWin--;
